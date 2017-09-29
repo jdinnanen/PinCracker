@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pin Cracker</title>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="shortcut icon" href="http://jinnanen.bcitwebdeveloper.ca/Game/favi-lock.png" type="image/x-icon">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102119132-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+<!--
+function wOpen() {
+window.open(width="800",height="800");
+}
+-->
+</script>
+</head>
+<body>
+<canvas id="c"></canvas>
+	<div class="wrapper">
+		
+		<!--Header - Game Name and Instructions-->
+		<div class="header">
+			<h1>Pin Cracker</h1>
+		</div>
+		
+		<!--Timer and Try Counters-->
+		<div class="count">
+			<p id="timer" class="timer"><span class="seconds">00:00:</span><span class="milli">00</span></p>
+			<p id="tries" class="tries">0/10</p>
+		</div>
+		
+
+		<!--Pin Code Holders-->
+		<section class="pinholder">
+			<article class="digit1">
+				<p id="dig1" class="digit">&nbsp;</p>
+				<label for ="user-input1"></label>
+				<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="user-input1" class="user-input" placeholder="#1" maxlength="1" data-number="1">
+				<p class="hint-txt">Hint 1</p>
+				<p id="last1" class ="last-hint">&nbsp;</p>
+				<p id="hint1" class="hint">&nbsp;</p>
+			</article>
+			<article class="digit2">
+				<p id="dig2" class="digit">&nbsp;</p>
+				<label for ="user-input2"></label>
+				<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="user-input2" class="user-input" placeholder="#2" maxlength="1" data-number="2">
+				<p class="hint-txt">Hint 2</p>
+				<p id="last2" class ="last-hint">&nbsp;</p>
+				<p id="hint2" class="hint">&nbsp;</p>
+			</article>
+			<article class="digit3">
+				<p id="dig3" class="digit">&nbsp;</p>
+				<label for ="user-input3"></label>
+				<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="user-input3" class="user-input" placeholder="#3" maxlength="1" data-number="3">
+				<p class="hint-txt">Hint 3</p>
+				<p id="last3" class ="last-hint">&nbsp;</p>
+				<p id="hint3" class="hint">&nbsp;</p>
+			</article>
+			<article class="digit4">
+				<p id="dig4" class="digit">&nbsp;</p>
+				<label for ="user-input4"></label>
+				<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="user-input4" class="user-input" placeholder="#4" maxlength="1" data-number="4">
+				<p class="hint-txt">Hint 4</p>
+				<p id="last4" class ="last-hint">&nbsp;</p>
+				<p id="hint4" class="hint">&nbsp;</p>
+			</article>
+		</section>
+
+		<!--Buttons-->
+		<button id="btn-start">Start Game</button>
+		<button id="btn-sub">Submit First Attempt</button>
+		
+		<!--Game Messages-->
+		<p id='startmessage' class='start-messages'>Welcome to Pin Cracker!!!<br>
+					Guess The Pin Code! <br>
+					Beat the Timer before the alarm is triggered!!<br>
+					You have 10 Attempts!!<br>
+					The timer will start with your first submission! </p>	
+
+	</div>
+<div id="out" class="game-messages">
+		<p>&nbsp;</p>
+	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="scripts/jquery.playSound.js"></script>
+  <script src="scripts/my2.js"></script>
+</body>
+</html>
